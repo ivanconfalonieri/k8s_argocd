@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-frontend
 spec:
-  replicas: 25
+  replicas: 5
   selector:
     matchLabels:
       app: nginx-frontend
