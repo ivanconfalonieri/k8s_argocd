@@ -28,8 +28,6 @@ metadata:
   name: nginx-frontend-service
 spec:
   type: LoadBalancer
-  externalIPs:
-  - 192.168.51.1
   selector:
     app: nginx-frontend
   ports:
