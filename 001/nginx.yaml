@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: argocdnginx
+  name: argocd-nginx
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-frontend
-  namespace: argocdnginx
+  namespace: argocd-nginx
 spec:
   replicas: 15
   selector:
@@ -37,7 +37,7 @@ spec:
           - sh
           - -c
           - |
-            echo "<h1 style='color: black; font-size: 32px; font-family: verdana'>argocd-nginx</h1>" > /usr/share/nginx/html/index.html
+            echo "<h1 style='color: black; font-size: 32px; font-family: tahoma'>argocd-nginx</h1>" > /usr/share/nginx/html/index.html
 
             echo "<p style='color: blue; font-size: 20px; font-family: verdana'>pod name: $(POD_NAME)</p>" >> /usr/share/nginx/html/index.html
             echo "<p style='color: blue; font-size: 20px; font-family: verdana'>pod ip: $(POD_IP)</p>" >> /usr/share/nginx/html/index.html
@@ -76,7 +76,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-frontend-service
-  namespace: argocdnginx
+  namespace: argocd-nginx
 spec:
   type: LoadBalancer
   selector:
