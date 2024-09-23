@@ -16,6 +16,9 @@ spec:
       containers:
       - name: nginx-frontend
         image: nginx:latest
+        volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html
         resources:
           limits:
             memory: "32Mi"
