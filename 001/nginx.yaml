@@ -9,7 +9,7 @@ metadata:
   name: nginx-frontend
   namespace: argocd-nginx
 spec:
-  replicas: 30
+  replicas: 10
   selector:
     matchLabels:
       app: nginx-frontend
