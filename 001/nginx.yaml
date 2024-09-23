@@ -44,6 +44,9 @@ spec:
             echo "<p style='color: black; font-size: 18px; font-family: verdana'>pod namespace: $(POD_NAMESPACE)</p>" >> /usr/share/nginx/html/index.html
             echo "<p style='color: black; font-size: 18px; font-family: verdana'>pod serviceaccount: $(POD_SERVICE_ACCOUNT)</p>" >> /usr/share/nginx/html/index.html
             echo "<p style='color: black; font-size: 18px; font-family: verdana'>pod node: $(NODE_NAME)</p>" >> /usr/share/nginx/html/index.html
+
+            echo "<h1 style='color: red; font-size: 20px; font-family: verdana; font-weight: bold'>DO NOT RESTART - GenAI</h1>" > /usr/share/nginx/html/index.html
+
         env:
             - name: NODE_NAME
               valueFrom:
