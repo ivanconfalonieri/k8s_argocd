@@ -9,7 +9,7 @@ metadata:
   name: nginx-deployment-1
   namespace: nginx-token
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
