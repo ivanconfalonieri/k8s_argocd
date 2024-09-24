@@ -8,6 +8,6 @@ data:
     <HTML>
     <HEAD><TITLE>K8s Dashboard info</TITLE></HEAD>
     <BODY>
-    <H1>tokeninfo</H1>
+    <H1>info</H1>
     <i>netbox-admin - 3J...</i>
     </BODY></HTML
