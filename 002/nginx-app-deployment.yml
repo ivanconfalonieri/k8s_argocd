@@ -39,8 +39,8 @@ metadata:
 spec:
   selector:
     app: nginx-app
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - targetPort: 80
-      port: 80
+      port: 8180
     
