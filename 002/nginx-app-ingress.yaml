@@ -16,7 +16,7 @@ spec:
       paths:
       - # path: /blogz
         # The below one is used to manage static files 
-        path: /nginx-app
+        path: /nginx-app/
         pathType: Prefix
         backend:
           service:
